@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.1505016722408027" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.Controller.Customer.HistoryBookingController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button fx:id="createButton" layoutX="350.0" layoutY="22.0" mnemonicParsing="false" onAction="#createBooking" prefHeight="43.0" prefWidth="107.0" text="TẠO PHIẾU" />
+            <Button fx:id="historyBookingButton" disable="true" layoutX="465.0" layoutY="22.0" mnemonicParsing="false" onAction="#historyBooking" prefHeight="43.0" prefWidth="107.0" text="LỊCH SỬ PHIẾU " />
+            <Button fx:id="inforButton" layoutX="579.0" layoutY="22.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="43.0" prefWidth="151.0" text="CHỈNH SỬA THÔNG TIN" />
+            <Button fx:id="logOutButton" layoutX="777.0" layoutY="22.0" mnemonicParsing="false" onAction="#logOut" prefHeight="43.0" prefWidth="107.0" text="ĐĂNG XUẤT" />
+            <Text layoutX="14.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HỆ THỐNG SÂN BÓNG HUST">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số xx, Đường yy, quận Hoàng Mai, Hà Nội" wrappingWidth="326.4609375">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="470.0" prefWidth="898.0" styleClass="body" stylesheets="@../style.css">
+         <children>
+            <TableView fx:id="table" layoutX="155.0" layoutY="68.0" prefHeight="349.0" prefWidth="607.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="136.0" AnchorPane.topAnchor="68.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="52.0" text="ID " />
+                <TableColumn fx:id="stationName" prefWidth="70.0" text="Tên sân" />
+                  <TableColumn fx:id="date" prefWidth="119.0" text="Ngày đặt sân" />
+                  <TableColumn fx:id="timeIn" prefWidth="79.0" text="Giờ vào" />
+                  <TableColumn fx:id="timeOut" prefWidth="84.0" text="Giờ ra" />
+                  <TableColumn fx:id="totalPrice" prefWidth="110.0" text="Tổng tiền" />
+                  <TableColumn fx:id="status" prefWidth="91.0" text="Trạng thái" />
+              </columns>
+            </TableView>
+            <Text fill="WHITE" layoutX="323.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LỊCH SỬ ĐẶT SÂN">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="bookingId" layoutX="613.0" layoutY="459.0" promptText="ID " />
+            <Button fx:id="exportButton" layoutX="545.0" layoutY="459.0" mnemonicParsing="false" onAction="#exportBillOnAction" prefHeight="25.0" prefWidth="50.0" text="In " />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

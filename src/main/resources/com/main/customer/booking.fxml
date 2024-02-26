@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.1505016722408027" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.Controller.Customer.CustomerBookingController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="89.0" prefWidth="898.0">
+         <children>
+            <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HỆ THỐNG SÂN BÓNG HUST">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số xx, Đường yy, quận Hoàng Mai, Hà Nội" wrappingWidth="326.4609375">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="createButton" disable="true" layoutX="365.0" layoutY="18.0" mnemonicParsing="false" onAction="#createBooking" prefHeight="43.0" prefWidth="107.0" text="TẠO PHIẾU" />
+            <Button fx:id="historyBookingButton" layoutX="479.0" layoutY="18.0" mnemonicParsing="false" onAction="#historyBooking" prefHeight="43.0" prefWidth="107.0" text="LỊCH SỬ PHIẾU " />
+            <Button fx:id="inforButton" layoutX="593.0" layoutY="18.0" mnemonicParsing="false" onAction="#updateInformation" prefHeight="43.0" prefWidth="151.0" text="CHỈNH SỬA THÔNG TIN" />
+            <Button fx:id="logOutButton" layoutX="777.0" layoutY="18.0" mnemonicParsing="false" onAction="#logOut" prefHeight="43.0" prefWidth="107.0" text="ĐĂNG XUẤT" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="560.0" prefWidth="526.0" styleClass="body" stylesheets="@../style.css">
+         <children>
+            <Label layoutX="264.0" layoutY="91.0" prefHeight="25.0" prefWidth="82.0" text="Họ và tên" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <TextField fx:id="customerNameField" editable="false" layoutX="383.0" layoutY="91.0" prefHeight="25.0" prefWidth="251.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></TextField>
+            <Label layoutX="264.0" layoutY="141.0" prefHeight="25.0" prefWidth="82.0" text="Số điện thoại" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <TextField fx:id="customerPhoneField" editable="false" layoutX="384.0" layoutY="141.0" prefHeight="25.0" prefWidth="251.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></TextField>
+            <Label layoutX="264.0" layoutY="241.0" prefHeight="25.0" prefWidth="82.0" text="Giờ vào" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label layoutX="264.0" layoutY="291.0" prefHeight="25.0" prefWidth="82.0" text="Giờ ra" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label layoutX="264.0" layoutY="341.0" prefHeight="25.0" prefWidth="82.0" text="Sân" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <TextField fx:id="totalPriceField" editable="false" layoutX="381.0" layoutY="388.0" prefHeight="25.0" prefWidth="251.0" promptText="Bấm tính tiền để hiển thị">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></TextField>
+            <ChoiceBox fx:id="timeInBox" layoutX="384.0" layoutY="241.0" prefHeight="25.0" prefWidth="251.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></ChoiceBox>
+            <ChoiceBox fx:id="timeOutBox" layoutX="384.0" layoutY="291.0" prefHeight="25.0" prefWidth="251.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></ChoiceBox>
+            <ChoiceBox fx:id="stationBox" layoutX="383.0" layoutY="341.0" prefHeight="25.0" prefWidth="251.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></ChoiceBox>
+            <Button fx:id="calculateButton" layoutX="264.0" layoutY="384.0" mnemonicParsing="false" onAction="#calculatePriceOnAction" prefHeight="32.0" prefWidth="76.0" text="Tính tiền" />
+            <Button fx:id="createBookingButton" layoutX="383.0" layoutY="454.0" mnemonicParsing="false" onAction="#createBookingOnAction" prefHeight="32.0" prefWidth="76.0" text="Tạo " />
+            <Label layoutX="264.0" layoutY="191.0" prefHeight="25.0" prefWidth="82.0" text="Ngày thuê" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <DatePicker fx:id="dayBookingPicker" layoutX="384.0" layoutY="191.0" prefHeight="25.0" prefWidth="251.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></DatePicker>
+            <Text fill="WHITE" layoutX="389.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐẶT SÂN BÓNG ">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

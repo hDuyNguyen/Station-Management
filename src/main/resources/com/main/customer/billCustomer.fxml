@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.13316582914572864" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="468.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/20-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.Controller.Customer.CustomerBill">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Text layoutX="96.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HỆ THỐNG SÂN BỐNG ĐÁ ABC">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Text>
+            <Text layoutX="48.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Địa chỉ: Số xx, Đường yy, quận Hoàng Mai,Hà nội" />
+         </children>
+      </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Text layoutX="130.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOÁ ĐƠN">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="157.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số:" />
+            <TextField fx:id="billId" editable="false" layoutX="184.0" layoutY="44.0" prefHeight="25.0" prefWidth="32.0" />
+            <Text layoutX="14.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Khách hàng:" />
+            <TextField fx:id="customerName" editable="false" layoutX="95.0" layoutY="71.0" prefHeight="16.0" prefWidth="167.0" />
+            <Text layoutX="14.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SĐT" />
+            <TextField fx:id="customerPhone" editable="false" layoutX="95.0" layoutY="106.0" prefHeight="16.0" prefWidth="167.0" />
+            <Text layoutX="14.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tên sân" />
+            <TextField fx:id="stationName" editable="false" layoutX="95.0" layoutY="140.0" prefHeight="16.0" prefWidth="167.0" />
+            <Text layoutX="14.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ngày thuê" />
+            <TextField fx:id="bookingDate" editable="false" layoutX="95.0" layoutY="174.0" prefHeight="16.0" prefWidth="167.0" />
+            <Text layoutX="14.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giờ vào" />
+            <TextField fx:id="timeIn" editable="false" layoutX="95.0" layoutY="207.0" prefHeight="16.0" prefWidth="167.0" />
+            <Text layoutX="14.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giờ ra" />
+            <TextField fx:id="timeOut" editable="false" layoutX="95.0" layoutY="241.0" prefHeight="16.0" prefWidth="167.0" />
+            <Text layoutX="14.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền" />
+            <TextField fx:id="totalPrice" editable="false" layoutX="95.0" layoutY="273.0" prefHeight="16.0" prefWidth="167.0" />
+            <Text layoutX="226.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Người lập phiếu" />
+            <TextField fx:id="employeeName" editable="false" layoutX="243.0" layoutY="346.0" prefHeight="25.0" prefWidth="51.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.1505016722408027" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.Controller.Admin.BillManagementController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="126.0" prefWidth="680.0">
+         <children>
+            <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HỆ THỐNG SÂN BÓNG HUST">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số xx, Đường yy, quận Hoàng Mai, Hà Nội" wrappingWidth="326.4609375">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="employeeButton" layoutX="349.0" layoutY="26.0" mnemonicParsing="false" onAction="#employeeButtonOnAction" prefHeight="40.0" prefWidth="88.0" text="NHÂN VIÊN" />
+            <Button fx:id="logOutButton" layoutX="806.0" layoutY="26.0" mnemonicParsing="false" onAction="#logOutOnAction" prefHeight="40.0" prefWidth="88.0" text="ĐĂNG XUẤT" />
+            <Button fx:id="stationButton" layoutX="550.0" layoutY="26.0" mnemonicParsing="false" onAction="#stationButtonOnAction" prefHeight="40.0" prefWidth="88.0" text="SÂN BÓNG" />
+            <Button fx:id="billButton" disable="true" layoutX="449.0" layoutY="26.0" mnemonicParsing="false" onAction="#billButtonOnAction" prefHeight="40.0" prefWidth="88.0" text="HOÁ ĐƠN" />
+            <Button fx:id="customerButton" layoutX="654.0" layoutY="26.0" mnemonicParsing="false" onAction="#customerButtonOnAction" prefHeight="40.0" prefWidth="101.0" text="KHÁCH HÀNG" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="body" stylesheets="@../style.css">
+         <children>
+            <TableView fx:id="table" layoutX="111.0" layoutY="70.0" prefHeight="329.0" prefWidth="677.0" AnchorPane.bottomAnchor="106.0" AnchorPane.leftAnchor="111.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="70.0">
+              <columns>
+                <TableColumn fx:id="billId" prefWidth="41.0" text="ID" />
+                <TableColumn fx:id="customerName" prefWidth="109.0" text="Tên khách hàng" />
+                  <TableColumn fx:id="bookingDate" prefWidth="75.0" text="Ngày thuê" />
+                  <TableColumn fx:id="customerPhone" prefWidth="75.0" text="SĐT" />
+                  <TableColumn fx:id="stationName" prefWidth="75.0" text="Tên sân" />
+                  <TableColumn fx:id="timeIn" prefWidth="75.0" text="Giờ vào" />
+                  <TableColumn fx:id="timeOut" prefWidth="75.0" text="Giờ ra" />
+                  <TableColumn fx:id="username" prefWidth="75.0" text="Nhân viên" />
+                  <TableColumn fx:id="totalPrice" prefWidth="75.0" text="Tổng tiền" />
+              </columns>
+            </TableView>
+            <Button fx:id="searchButton" layoutX="222.0" layoutY="422.0" mnemonicParsing="false" onAction="#searchBillOnAction" prefHeight="32.0" prefWidth="88.0" text="Tìm kiếm" />
+            <DatePicker fx:id="bookingDateField" layoutX="321.0" layoutY="422.0" prefHeight="32.0" prefWidth="181.0" />
+            <Text fill="WHITE" layoutX="302.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUẢN LÝ HOÁ ĐƠN" wrappingWidth="326.4609375">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

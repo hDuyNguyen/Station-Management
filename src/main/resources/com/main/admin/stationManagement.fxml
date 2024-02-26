@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.1505016722408027" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.Controller.Admin.StationManagement">
+  <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HỆ THỐNG SÂN BÓNG HUST">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số xx, Đường yy, quận Hoàng Mai, Hà Nội" wrappingWidth="326.4609375">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Button fx:id="employeeButton" layoutX="344.0" layoutY="24.0" mnemonicParsing="false" onAction="#employeeButtonOnAction" prefHeight="40.0" prefWidth="88.0" text="NHÂN VIÊN" />
+            <Button fx:id="logOutButton" layoutX="796.0" layoutY="24.0" mnemonicParsing="false" onAction="#logOutOnAction" prefHeight="40.0" prefWidth="88.0" text="ĐĂNG XUẤT" />
+            <Button fx:id="stationButton" disable="true" layoutX="541.0" layoutY="24.0" mnemonicParsing="false" onAction="#stationButtonOnAction" prefHeight="40.0" prefWidth="88.0" text="SÂN BÓNG" />
+            <Button fx:id="billButton" layoutX="441.0" layoutY="24.0" mnemonicParsing="false" onAction="#billButtonOnAction" prefHeight="40.0" prefWidth="88.0" text="HOÁ ĐƠN" />
+            <Button fx:id="customerButton" layoutX="639.0" layoutY="24.0" mnemonicParsing="false" onAction="#customerButtonOnAction" prefHeight="40.0" prefWidth="101.0" text="KHÁCH HÀNG" />
+         </children>
+      </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="body" stylesheets="@../style.css">
+         <children>
+            <AnchorPane layoutX="47.0" layoutY="84.0" minHeight="0.0" minWidth="0.0" prefHeight="338.0" prefWidth="254.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="74.0" prefHeight="24.0" prefWidth="75.0" text="Tên sân" textFill="#f80a0a">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="120.0" prefHeight="24.0" prefWidth="75.0" text="Giá sân" textFill="#f80a0a">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="stationNameField" layoutX="78.0" layoutY="74.0" />
+                  <TextField fx:id="stationPriceField" layoutX="78.0" layoutY="120.0" />
+                  <Button fx:id="createStationButton" layoutX="32.0" layoutY="211.0" mnemonicParsing="false" onAction="#createStationOnAction" prefHeight="25.0" prefWidth="60.0" text="Thêm" />
+                  <Button fx:id="updateStationButton" layoutX="32.0" layoutY="251.0" mnemonicParsing="false" onAction="#updateStationOnAction" prefHeight="25.0" prefWidth="60.0" text="Sửa" />
+                  <Button fx:id="deleteStationButton" layoutX="109.0" layoutY="211.0" mnemonicParsing="false" onAction="#deleteStationOnAction" prefHeight="25.0" prefWidth="60.0" text="Xoá" />
+                  <Button fx:id="cancelButton" layoutX="109.0" layoutY="251.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="25.0" prefWidth="60.0" text="Huỷ" />
+                  <Button fx:id="searchStationButton" layoutX="12.0" layoutY="163.0" mnemonicParsing="false" onAction="#searchStationOnAction" prefHeight="24.0" prefWidth="75.0" text="Tìm kiếm" />
+                  <TextField fx:id="stationIdField" layoutX="100.0" layoutY="163.0" prefHeight="25.0" prefWidth="106.0" promptText="ID Sân" />
+               </children>
+            </AnchorPane>
+            <TableView fx:id="table" layoutX="411.0" layoutY="104.0" prefHeight="299.0" prefWidth="386.0">
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="56.0" text="ID" />
+                  <TableColumn fx:id="name" prefWidth="132.0" text="Tên sân" />
+                  <TableColumn fx:id="price" prefWidth="189.0" text="Giá thuê" />
+               </columns>
+            </TableView>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="291.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUẢN LÝ SÂN BÓNG">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
